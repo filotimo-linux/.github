@@ -34,7 +34,6 @@ This list also will not be comprehensive, but will be expanded as time goes on. 
 - Virt-manager is set up to work properly with SELinux.
 - Samba and kdenetwork-filesharing are included and preconfigured for filesharing over a local network. This is usually quite annoying to configure, but will now just work through Dolphin. A patched kdenetwork-filesharing is installed with much better UX.
 - firewall-config is preinstalled for easy UI-based firewall configuration and has a shortcut in System Settings. 
-- supergfxctl is included on NVIDIA images to control hybrid graphics systems.
 - `fish` is installed as the default shell. Don't worry! It's wrapped with a script so `/etc/profile` still works.
 - Fcitx is installed and configured out of the box for easy use of IME and other keyboard layouts.
 - Some nicer and more professional-looking backgrounds are included with the system and the default background is changed.
