@@ -57,7 +57,7 @@ vm.vfs_cache_pressure=66
 ```
 , improving performance with zram, which is configured [to 2 times the system memory amount](https://issuetracker.google.com/issues/227605780). This should significantly improve responsiveness on memory-constrained systems, and even slightly improve things on normal systems. zram is a much more desirable and much faster alternative to disk-based swap, which other distros such as Mint use.
 See https://github.com/ublue-os/bazzite/issues/1570 and https://github.com/pop-os/default-settings/pull/163
-- `zram` automatically uses `zstd` instead of the default `lzo-rle` on systems with 16GiB of RAM or below, significantly increasing the compression ratio, albeit incurring a less significant performance penalty.
+- `zram` automatically uses `zstd` on systems with 8GiB of RAM or below, significantly increasing the compression ratio, albeit incurring a less significant performance penalty. It uses `lz4` on systems with greater than this amount of RAM.
 - Dynamic rebalancing of BTRFS file systems is enabled by default.
 - Users can mount drives without authentication (through graphical interfaces), which also fixes the KDE automounter.
 - The bazzite kernel is preinstalled, which ships with much better hardware compatibility and increased performance.
