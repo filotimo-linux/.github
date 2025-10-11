@@ -69,15 +69,11 @@ See https://github.com/ublue-os/bazzite/issues/1570 and https://github.com/pop-o
 - The following are set for improved networking performance:
 ```
 net.core.default_qdisc=fq
-net.core.netdev_max_backlog=16384
-net.core.somaxconn=8192
 net.ipv4.tcp_congestion_control=bbr
-net.ipv4.tcp_fastopen=3
 ```
 - The following are set for improved kernel hardening:
 ```
 kernel.kexec_load_disabled=1
-kernel.kptr_restrict=1
 ```
 - Dirty centisec values are dynamically determined for storage hardware.
 - IO schedulers are dynamically determined - using Kyber for fast SSDs and BFQ for rotational devices.
